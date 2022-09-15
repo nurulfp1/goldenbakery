@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="goldenbakery_menu_root" 
+              name="Golden Bakery" 
+              sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="goldenbakery_menucake_menu_categ" 
+              name="Menu Cake" 
+              parent="goldenbakery_menu_root" 
+              sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="goldenbakery_employee_menu_categ" 
+              name="Employee" 
+              parent="goldenbakery_menu_root" 
+              sequence="20"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="goldenbakery_rawingridient_menu_categ" 
+              name="Raw Ingredient" 
+              parent="goldenbakery_menu_root" 
+              sequence="40"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="goldenbakery_transaksi_menu_categ" 
+              name="Transaksi" 
+              parent="goldenbakery_menu_root" 
+              sequence="50"/>
+
+    !-- This Menu Item Must have a parent -->
+    <menuitem id="goldenbakery_addstok_menu_categ" 
+              name="Add Stok" 
+              parent="goldenbakery_menu_root" 
+              sequence="60"/>
+    
+</odoo>

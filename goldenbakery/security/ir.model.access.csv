@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_goldenbakery_menucake,access.goldenbakery.menucake,model_goldenbakery_menucake,,1,1,1,1
+access_goldenbakery_categorycake,access.goldenbakery.categorycake,model_goldenbakery_categorycake,,1,1,1,1
+access_goldenbakery_employee,access.goldenbakery.employee,model_goldenbakery_employee,,1,1,1,1
+access_goldenbakery_chef,access.goldenbakery.chef,model_goldenbakery_chef,,1,1,1,1
+access_goldenbakery_cashier,access.goldenbakery.cashier,model_goldenbakery_cashier,,1,1,1,1
+access_goldenbakery_cleaningservice,access.goldenbakery.cleaningservice,model_goldenbakery_cleaningservice,,1,1,1,1
+access_goldenbakery_rawingridient,access.goldenbakery.rawingridient,model_goldenbakery_rawingridient,,1,1,1,1
+access_goldenbakery_supplier,access.goldenbakery.supplier,model_goldenbakery_supplier,,1,1,1,1
+access_goldenbakery_transaksi,access.goldenbakery.transaksi,model_goldenbakery_transaksi,,1,1,1,1
+access_goldenbakery_detailtransaksi,access.goldenbakery.detailtransaksi,model_goldenbakery_detailtransaksi,,1,1,1,1
+access_goldenbakery_tambahstokcake,access.goldenbakery.tambahstokcake,model_goldenbakery_tambahstokcake,,1,1,1,1
+access_goldenbakery_inputstokbahanbaku,access.goldenbakery.inputstokbahanbaku,model_goldenbakery_inputstokbahanbaku,,1,1,1,1

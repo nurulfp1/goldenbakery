@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- goldenbakery.categorycake tree view -->
+    <record id="goldenbakery_categorycake_view_tree" model="ir.ui.view">
+        <field name="name">Category Menu</field>
+        <field name="model">goldenbakery.categorycake</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="kode_categ"/>
+                <field name="kode_chiller"/>
+                <field name="jml_item"/>
+                <field name="daftar"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- goldenbakery.categorycake form view -->
+    <record id="goldenbakery_categorycake_view_form" model="ir.ui.view">
+        <field name="name">Form Category Menu</field>
+        <field name="model">goldenbakery.categorycake</field>
+        <field name="arch" type="xml">
+            <form string="Category Menu">
+                <sheet>
+                    <group name="Category" string="Letak Category">
+                        <field name="name" 
+                               required="1" /> 
+                        <field name="kode_categ"/> 
+                        <field name="jml_item"/>
+                    </group>
+                    <group name="chiller" string="Letak Barang">
+                        <field name="kode_chiller"/> 
+                        <field name="menucake_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- goldenbakery.categorycake action window -->
+    <record id="goldenbakery_categorycake_action" model="ir.actions.act_window">
+        <field name="name">Category Cake</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">goldenbakery.categorycake</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="goldenbakery_categorycake_menu_act" 
+              name="Category Cake" 
+              parent="goldenbakery_menucake_menu_categ" 
+              action="goldenbakery_categorycake_action" 
+              sequence="20"/>
+
+</odoo>

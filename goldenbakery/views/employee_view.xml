@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- goldenbakery.employee tree view -->
+    <record id="goldenbakery_employee_view_tree" model="ir.ui.view">
+        <field name="name">goldenbakery.employee.view.tree</field>
+        <field name="model">goldenbakery.employee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="alamat"/>
+                <field name="jenis_kelamin"/>
+                <field name="tgl_lahir"/> 
+                <field name="gaji"/>       
+                <field name="tunjangan"/>       
+            </tree>
+        </field>
+    </record>
+
+    <!-- goldenbakery.employee form view -->
+    <record id="goldenbakery_employee_view_form" model="ir.ui.view">
+        <field name="name">goldenbakery.employee.view.form</field>
+        <field name="model">goldenbakery.employee</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group name="data" string="Data">
+                        <field name="name"/>
+                        <field name="alamat"/>
+                        <field name="jenis_kelamin"/>
+                        <field name="tgl_lahir"/>
+                    </group>
+                    <group name="informasi" string="Informasi">
+                        <field name="gaji"/>
+                        <field name="tunjangan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

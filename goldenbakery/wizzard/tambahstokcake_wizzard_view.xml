@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="tambah_stok_cake_view_form_wizzard" model="ir.ui.view">
+        <field name="name">Tambah Stok Cake</field>
+        <field name="model">goldenbakery.tambahstokcake</field>
+        <field name="arch" type="xml">
+            <form string="Form Tambah Stok Cake">
+                <group>      
+                    <field name="menucake_id"/>
+                    <field name="jumlah"/>
+                </group>
+                <footer>        
+                    <button name="button_tambah_stok_cake" string="Input Cake" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="tambah_stok_cake_action_wizzard" model="ir.actions.act_window">
+        <field name="name">Tambah Stok Cake</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">goldenbakery.tambahstokcake</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tambah_stok_cake_view_form_wizzard"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="tambah_stok_cake_menu_action_wizzard" 
+              name="Cake" 
+              parent="goldenbakery_addstok_menu_categ" 
+              action="tambah_stok_cake_action_wizzard" 
+              sequence="61"/>
+
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="input_stok_bahan_baku_view_form_wizzard" model="ir.ui.view">
+        <field name="name">iIput Stok Bahan Baku</field>
+        <field name="model">goldenbakery.inputstokbahanbaku</field>
+        <field name="arch" type="xml">
+            <form string="Form Input Stok Bahan Baku">
+                <group>      
+                    <field name="rawingridient_id"/>
+                    <field name="jumlah"/>
+                </group>
+                <footer>        
+                    <button name="button_input_stok_bahan_baku" string="Input Bahan Baku" type="object" class="btn btn-warning"/>
+                    <button string="Cancel" special="cancel" class="btn btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="input_stok_bahan_baku_action_wizzard" model="ir.actions.act_window">
+        <field name="name">Input Stok Bahan Baku</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">goldenbakery.inputstokbahanbaku</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="input_stok_bahan_baku_view_form_wizzard"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="input_stok_bahan_baku_menu_action_wizzard" 
+              name="Bahan Baku" 
+              parent="goldenbakery_addstok_menu_categ" 
+              action="input_stok_bahan_baku_action_wizzard" 
+              sequence="62"/>
+
+</odoo>

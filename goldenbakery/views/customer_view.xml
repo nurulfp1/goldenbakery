@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+    <record id="res_partner_customer_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Daftar Customer</field>
+        <field name="model">res.partner</field>
+        <field name="mode">extension</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="poin"/>
+                <field name="level"/>      
+            </xpath>
+            <xpath expr="//field[@name='function']" position="attributes">
+                <attribute name="invisible">1</attribute>            
+            </xpath>
+        </field>
+    </record> 
+
+ 
+    <record id="res_partner_customer_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form Customer</field>
+        <field name="model">res.partner</field> 
+        <field name="mode">extension</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="poin"/> 
+                <field name="level"/>         
+            </xpath>
+            <xpath expr="//field[@name='function']" position="attributes">
+                <attribute name="invisible">1</attribute>            
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="string">NPWP</attribute>            
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="is_customer"/>           
+            </xpath> 
+        </field>
+    </record>
+
+    
+    <record id="res_partner_customer_inherit_search" model="ir.ui.view">
+        <field name="name">res.partner.inherit.view.search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position='after'>
+                <filter name="customer" string="Customer" domain="[('is_customer', '=', True)]"/>
+            </field>
+        </field>
+    </record>
+    
+ 
+    
+    <record id="res_partner_customer_action" model="ir.actions.act_window">
+        <field name="name">Customer Membership</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">
+            {
+                'search_default_customer':1,
+                'default_is_cust':True
+            }
+        </field>
+    </record>
+
+    <menuitem id="customer_view_menu_act" 
+              name="Customer" 
+              parent="goldenbakery_menu_root" 
+              action="res_partner_customer_action" 
+              sequence="30"/>
+
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- goldenbakery.menucake tree view -->
+    <record id="goldenbakery_menucake_view_tree" model="ir.ui.view">
+        <field name="name">goldenbakery.menucake.view.tree</field>
+        <field name="model">goldenbakery.menucake</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="harga_modal"/>
+                <field name="harga_jual"/>
+                <field name="stok"/>
+                <field name="categorycake_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- goldenbakery.menucake form view -->
+    <record id="goldenbakery_menucake_view_form" model="ir.ui.view">
+        <field name="name">Form Menu Cake</field>
+        <field name="model">goldenbakery.menucake</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <header>
+                    <button name="%(tambah_stok_cake_action_wizzard)d" string="Input Cake" type="action" class="btn btn-warning"/>        
+                </header>
+                <sheet>
+                    <group>
+                       <field name="name"/>
+                       <field name="harga_modal"/>
+                       <field name="harga_jual"/>
+                       <field name="stok"/>  
+                    </group>
+                    <group name="categorycake" string="Kelompok Barang">
+                        <field name="categorycake_id"/>     
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- goldenbakery.menucake action window -->
+    <record id="goldenbakery_menucake_action" model="ir.actions.act_window">
+        <field name="name">Menu Cake</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">goldenbakery.menucake</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="goldenbakery_menucake_menu_act" 
+              name="Menu Cake" 
+              parent="goldenbakery_menucake_menu_categ" 
+              action="goldenbakery_menucake_action" 
+              sequence="10"/>
+
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_transaksi_pdf">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <h2><b>FAKTUR TRANSAKSI INTERNAL</b></h2>
+                    <t t-foreach="docs" t-as="d">
+                        <div class="row">
+                            <div class="col-4">Kode Order : </div>
+                            <div class="col-8"><span t-field="d.name"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Nama Pembeli : </div>
+                            <div class="col-8"><span t-field="d.nama_pembeli"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Tanggal : </div>
+                            <div class="col-8"><span t-field="d.tgl_transaksi"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Total Pembayaran : </div>
+                            <div class="col-8"><span t-field="d.total_bayar"/></div>
+                        </div>
+                        <br/>
+                            <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <span>Item</span>
+                                    </th>
+                                    <th>
+                                        <span>Quantity</span>
+                                    </th>
+                                    <th>
+                                        <span>Harga Satuan</span>
+                                    </th>
+                                    <th>
+                                        <span>Total</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <t t-foreach="d.detailtransaksi_ids" t-as="line">
+                                <tr>
+                                    <td>
+                                        <span t-esc="line['menucake_id'].name"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['qty']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['harga_satuan']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['subtotal']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                        <br/><br/>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

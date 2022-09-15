@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="report_supplier_xlsx" model="ir.actions.report">
+        <field name="name">Supplier Excel</field>
+        <field name="model">goldenbakery.supplier</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_supplier_xlsx</field>
+        <field name="report_file">goldenbakery.report_supplier_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_supplier"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_transaksi_xlsx" model="ir.actions.report">
+        <field name="name">Transaksi Excel</field>
+        <field name="model">goldenbakery.transaksi</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_transaksi_xlsx</field>
+        <field name="report_file">goldenbakery.report_transaksi_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_transaksi"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_menucake_xlsx" model="ir.actions.report">
+        <field name="name">Daftar Cake Excel</field>
+        <field name="model">goldenbakery.menucake</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_menucake_xlsx</field>
+        <field name="report_file">goldenbakery.report_menucake_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_menucake"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_categorycake_xlsx" model="ir.actions.report">
+        <field name="name">Category Excel</field>
+        <field name="model">goldenbakery.categorycake</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_categorycake_xlsx</field>
+        <field name="report_file">goldenbakery.report_categorycake_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_categorycake"/>
+        <field name="binding_type">report</field>
+    </record>
+
+     <record id="report_rawingridient_xlsx" model="ir.actions.report">
+        <field name="name">Bahan Baku Excel</field>
+        <field name="model">goldenbakery.rawingridient</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_rawingridient_xlsx</field>
+        <field name="report_file">goldenbakery.report_rawingridient_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_rawingridient"/>
+        <field name="binding_type">report</field>
+    </record> 
+    
+     <record id="report_chef_xlsx" model="ir.actions.report">
+        <field name="name">Employee Excel</field>
+        <field name="model">goldenbakery.chef</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_chef_xlsx</field>
+        <field name="report_file">goldenbakery.report_chef_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_chef"/>
+        <field name="binding_type">report</field>
+    </record> 
+
+     <record id="report_cashier_xlsx" model="ir.actions.report">
+        <field name="name">Employee Excel</field>
+        <field name="model">goldenbakery.cashier</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_cashier_xlsx</field>
+        <field name="report_file">goldenbakery.report_cashier_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_cashier"/>
+        <field name="binding_type">report</field>
+    </record> 
+
+     <record id="report_cleaningservice_xlsx" model="ir.actions.report">
+        <field name="name">Employee Excel</field>
+        <field name="model">goldenbakery.cleaningservice</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">goldenbakery.report_cleaningservice_xlsx</field>
+        <field name="report_file">goldenbakery.report_cleaningservice_xlsx</field>
+        <field name="binding_model_id" ref="model_goldenbakery_cleaningservice"/>
+        <field name="binding_type">report</field>
+    </record> 
+
+    <record id="report_transaksi_pdf" model="ir.actions.report">
+        <field name="name">Print Faktur</field>
+        <field name="model">goldenbakery.transaksi</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">goldenbakery.report_transaksi_pdf</field>
+        <field name="report_file">goldenbakery.report_transaksi_pdf</field>
+        <field name="binding_model_id" ref="model_goldenbakery_transaksi"/>
+        <field name="binding_type">report</field>
+    </record> 
+
+</odoo>
