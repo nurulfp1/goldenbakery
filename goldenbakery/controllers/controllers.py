@@ -35,7 +35,7 @@ class goldenbakery(http.Controller):
         for ri in rawingridient:
             isi.append({
                 'nama_rawingridient' : ri.name,
-                'alamat' : ri.unit,
+                'unit' : ri.unit,
                 'harga_beli' : ri.harga_beli,
                 'stok' : ri.stok,
                 'supplier' : ri.supplier_id[0].name
