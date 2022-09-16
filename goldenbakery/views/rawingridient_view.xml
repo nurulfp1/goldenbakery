@@ -28,7 +28,7 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="unit" required="1"/>
+                        <field name="unit"/>
                         <field name="harga_beli"/>
                         <field name="stok"/>
                     </group>
